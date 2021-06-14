@@ -1,0 +1,22 @@
+.wrapper{
+   background: #FeF2F2;
+   width: 100%;
+   display: flex;
+}
+
+.wrapper h3{
+   font-size: 1.7rem;
+}
+.wrapper button{
+   align-self: center;
+   padding: 15px 40px;
+   background: rgb(254, 125, 78);
+   color: white;
+   border: none;
+   font-weight: 800;
+   border-radius: 40px;
+   transition: .3s;
+}
+.wrapper button:hover{
+   background:rgba(254, 125, 78, .2);
+}
