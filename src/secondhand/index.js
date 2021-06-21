@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import classes from './secondhand.module.css';
 import BookCard from './bookCard/bookCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import BooksContext from '../store/books-context';
 
-function Secondhand({books}) {
+function Secondhand() {
+   const BooksCont = useContext(BooksContext);
+   let books = BooksCont.books;
+   console.log(books);
    let displayBooks = []
    for (let i = 0; i < Math.min(4, books.length); i++) {
       displayBooks.push(<BookCard key={`book${i}`} book={books[i]}/>);

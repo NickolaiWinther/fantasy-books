@@ -3,12 +3,11 @@ import classes from './styles.module.css';
 import LeftSide from './leftSide';
 import RightSide from './rightSide';
 
-function BookOfTheMonth({book}) {
-   console.log(book);
+function BookOfTheMonth() {
    return (
       <section className={classes.wrapper}>
-         <LeftSide/>
-         <RightSide book={book}/>
+         <LeftSide />
+         <RightSide />
       </section>
    )
 }

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import BooksContext from '../../store/books-context';
 
 import classes from './styles.module.css';
 
-function RightSide({book}) {
-  console.log(book);
+function RightSide() {
+  let bookCont = useContext(BooksContext);
+  let book = bookCont.books[0];
   return (
     <div className={classes.wrapper}>
       <img src={`./images/books/${book.image}`} alt={book.name}/>
