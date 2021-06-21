@@ -2,21 +2,48 @@
    background: #FeF2F2;
    width: 100%;
    display: flex;
+   padding: 5vw 10vw 7vw 7vw;
 }
-
+.wrapper img{
+   height: 20vw;
+   box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3);
+}
+.wrapper >div{
+   padding-left: 6vw; 
+}
 .wrapper h3{
    font-size: 1.7rem;
+   color: #543D32;
+}
+.wrapper p{
+   max-width: 400px;
+   padding-bottom: 3vw;
 }
 .wrapper button{
+   text-align: center;
+   line-height: 20px;
+   box-sizing: border-box;
    align-self: center;
    padding: 15px 40px;
-   background: rgb(254, 125, 78);
-   color: white;
+   background: white;
    border: none;
    font-weight: 800;
    border-radius: 40px;
-   transition: .3s;
+   transition: box-shadow .2s, color .3s .2s;
+   color: white;
+   box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2), 0 0 0px 25px #FE7D4E inset;
 }
 .wrapper button:hover{
-   background:rgba(254, 125, 78, .2);
+   color: #FE7D4E;
+   box-shadow:0 0 15px 2px rgba(0, 0, 0, 0.2), 0 0 0px 3px #FE7D4E inset;
+}
+.wrapper table {
+   text-align: left;
+}
+.wrapper table tr > *{
+   padding: 2px 50px 2px 0;
+}
+.wrapper table tbody{
+   font-weight: bolder;
+   color: #543D32;
 }

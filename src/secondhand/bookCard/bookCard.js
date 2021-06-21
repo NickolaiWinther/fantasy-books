@@ -4,7 +4,7 @@ import classes from './bookCard.module.css'
 function BookCard({ book }) {
    return (
       <figure className={classes.book }>
-         <img alt={book.name} src={`./images/${book.image.replace("./", "")}`}/>
+         <img alt={book.name} src={`./images/books/${book.image.replace("./", "")}`}/>
          <div className={classes['text-wrapper']}>
             <figcaption>
                {book.name}

@@ -1,12 +1,8 @@
-let books = [];
-const load = require.context('../public/images', false, /(.*(json|png)$)/).keys();
-for (let i = 0; i < load.length; i+=2) {
-   books.push({
-      "name": load[i].replace(/([A-Z])/g, ' $1').replace(/(.\/ |\.[^/.]+$)/g, ''),
-      "image": load[i+1].replace(/.\//g, ''),
-      "text": load[i].replace(/.\//g, '')
-   });
-   
+async function getBooks() {
+   let load = await fetch('http://localhost:3001/books');
+   load = await load.json();
+   console.log(load);
+   return load;
 }
 
-export default books;
+export default getBooks();

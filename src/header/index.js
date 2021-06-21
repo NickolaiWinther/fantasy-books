@@ -10,7 +10,7 @@ function Header() {
          <nav>
             <ul>
                { menu.map((x, i) => 
-                  <li key={i}><NavLink activeClassName='active' to={x.url}>{x.name}</NavLink></li>
+                  <li key={i}><NavLink activeClassName={classes.active} to={x.url}>{x.name}</NavLink></li>
                ) }
             </ul>
             <button>Opret Bruger</button>

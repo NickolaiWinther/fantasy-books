@@ -1,0 +1,26 @@
+.wrapper{
+   /* background: url("../../public/images/Cover-Bogklub.jpg"); */
+   background: url("Cover-Bogklub.jpg");
+   background-size: contain;
+   background-repeat: no-repeat;
+   height: 38.9vw;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+.wrapper button{
+   box-sizing: border-box;
+   align-self: center;
+   padding: 15px 40px;
+   background: #FE7D4E;
+   color: white;
+   border: none;
+   font-weight: 800;
+   border-radius: 40px;
+   transition: .3s;
+   box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
+}
+.wrapper button:hover{
+   background: white;
+   color: #FE7D4E;
+}

@@ -4,7 +4,7 @@ import LeftSide from './leftSide';
 import RightSide from './rightSide';
 
 function BookOfTheMonth({book}) {
-   
+   console.log(book);
    return (
       <section className={classes.wrapper}>
          <LeftSide/>

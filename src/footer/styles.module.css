@@ -1,0 +1,34 @@
+.wrapper{
+   padding: 0 0 0 10vw;
+   background: #FEFDF9;
+   display: grid;
+   grid-template-columns: 30% 30% 40%;
+}
+.wrapper h2{
+   color: #333;
+}
+.wrapper h2 span{
+   color: #FE7D4E;
+}
+.wrapper div *{
+   margin: 0;
+}
+.wrapper > div{
+   padding-top: 50px;
+}
+.wrapper .socialHeader{
+   font-weight: bolder;
+   margin-top: 80px;
+}
+.wrapper .bold{
+   font-weight: bolder;
+   padding-top: 20px;
+}
+.wrapper svg{
+   color: #FE7D4E;
+   font-size: 3rem;
+   margin: 7px 15px 0 0;
+}
+.wrapper img {
+   width: 100%;
+}

@@ -5,17 +5,26 @@ import Hero from './hero';
 import Secondhand from './secondhand';
 import books from './loadBooks';
 import BookOfTheMonth from './bookOfTheMonth';
+import BookClub from './bookClub';
+import Footer from './footer';
 
-function App() {
-  let bookNumber = Math.floor(Math.random() * (books.length - 0 +1) + 0);
-  console.log(books);
+async function App() {
+  books = books.then(test => console.log(test));
+
+  let bookNumber = Math.floor(Math.random() * ((books.length - 1)  +1) );
   console.log("bookNumber", bookNumber);
+  
+  let bookOfTheMonth = books[bookNumber];
+  console.log("bookOfTheMonth", bookOfTheMonth);
+  
   return (
     <>
       <Header/>
       <Hero/>
       <Secondhand books = {books}/>
-      <BookOfTheMonth book = {books[bookNumber]}/>
+      <BookOfTheMonth book = {bookOfTheMonth}/>
+      <BookClub/>
+      <Footer/>
     </>
   );
 }
