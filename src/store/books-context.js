@@ -8,7 +8,7 @@ const BooksContext = createContext({
 
 export function BooksContextProvider(props) {
    const [loadedBooks, setLoadedBooks] = useState([]);
-
+   
    useEffect(() => {
       fetch('http://localhost:3001/books')
          .then((response) => {
@@ -24,12 +24,14 @@ export function BooksContextProvider(props) {
                   ...data[key]
                })
             }
+            console.log(allBooks);
+
 
             setLoadedBooks(allBooks);
          })
    }, [])
 
-   function addBooksHandler(newBook) {
+   function addBookHandler(newBook) {
       fetch("http://localhost:3001/books", {
          method: "POST",
          headers: {
@@ -64,7 +66,7 @@ export function BooksContextProvider(props) {
 
    const context = {
       books: loadedBooks,
-      addBooks: addBooksHandler,
+      addBooks: addBookHandler,
       removeBooks: removeBookHandler
    }
 

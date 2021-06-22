@@ -9,10 +9,12 @@ function Secondhand() {
    const BooksCont = useContext(BooksContext);
    let books = BooksCont.books;
    console.log(books);
-   let displayBooks = []
-   for (let i = 0; i < Math.min(4, books.length); i++) {
-      displayBooks.push(<BookCard key={`book${i}`} book={books[i]}/>);
-   }
+   books.map((book, i) => {
+      return ( <BookCard key={`book${i}`} book={books[i]}/> );
+   })
+   // for (let i = 0; i < Math.min(4, books.length); i++) {
+   //    displayBooks.push(<BookCard key={`book${i}`} book={books[i]}/>);
+   // }
    return (
       <section className={classes.secondhand}>
          <div className={classes.header}>
@@ -20,7 +22,7 @@ function Secondhand() {
             <a href="/" className={classes['read-more']} >Vis flere <FontAwesomeIcon icon={faArrowRight} /></a>
          </div>
          <div className={classes.books}>
-            { displayBooks }
+            { books }
          </div>
       </section>
    )
